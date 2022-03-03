@@ -1,0 +1,309 @@
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+
+        <!--템플릿 상속-->
+        {% extends 'base.html' %}
+        {% load static %}
+        <title>Title</title>
+        <style>
+            image{
+                cursor:move;
+            }
+            .draggable.dragging {
+                opacity: 0.5;
+            }
+        </style>
+    </head>
+    <body>
+    {% block content %}
+        <div class="container" style="margin-bottom: 3%">
+            <h2 id="keyword">각진</h2>
+            <p class="lead text-muted">해당 단어에 적합한 글꼴을 상, 중, 하로 분류해주세요</p>
+        </div>
+
+        <div class="row mb-4" id="font_list">
+            <div class="col-md-2 mb-3 draggable" id ="1" draggable="true">
+                <image width="100%" src="{% static 'img/1.png' %}" ></image>
+            </div>
+            <div class="col-md-2 mb-3 draggable" id ="2" draggable="true">
+                <image width="100%" src="{% static 'img/2.png' %}" ></image>
+            </div>
+            <div class="col-md-2 mb-3 draggable" id ="3"  draggable="true">
+                <image width="100%" src="{% static 'img/3.png' %}" ></image>
+            </div>
+            <div class="col-md-2 mb-3 draggable" id ="4"  draggable="true">
+                <image width="100%" src="{% static 'img/4.png' %}" ></image>
+            </div>
+            <div class="col-md-2 mb-3 draggable" id ="5"  draggable="true">
+                <image width="100%" src="{% static 'img/5.png' %}" ></image>
+            </div>
+            <div class="col-md-2 mb-3 draggable" id ="6"  draggable="true">
+                <image width="100%" src="{% static 'img/6.png' %}" ></image>
+            </div>
+            <div class="col-md-2 mb-3 draggable" id ="7"  draggable="true">
+                <image width="100%" src="{% static 'img/7.png' %}" ></image>
+            </div>
+            <div class="col-md-2 mb-3 draggable" id ="8"  draggable="true">
+                <image width="100%" src="{% static 'img/8.png' %}" ></image>
+            </div>
+            <div class="col-md-2 mb-3 draggable" id ="9"  draggable="true">
+                <image width="100%" src="{% static 'img/9.png' %}" ></image>
+            </div>
+            <div class="col-md-2 mb-3 draggable" id ="10"  draggable="true">
+                <image width="100%" src="{% static 'img/10.png' %}" ></image>
+            </div>
+            <div class="col-md-2 mb-3 draggable" id ="11"  draggable="true">
+                <image width="100%" src="{% static 'img/11.png' %}" ></image>
+            </div>
+            <div class="col-md-2 mb-3 draggable" id ="12"  draggable="true">
+                <image width="100%" src="{% static 'img/12.png' %}" ></image>
+            </div>
+            <div class="col-md-2 mb-3 draggable" id ="13"  draggable="true">
+                <image width="100%" src="{% static 'img/13.png' %}" ></image>
+            </div>
+            <div class="col-md-2 mb-3 draggable" id ="14"  draggable="true">
+                <image width="100%" src="{% static 'img/14.png' %}" ></image>
+            </div>
+            <div class="col-md-2 mb-3 draggable" id ="15"  draggable="true">
+                <image width="100%" src="{% static 'img/15.png' %}" ></image>
+            </div>
+            <div class="col-md-2 mb-3 draggable" id ="16"  draggable="true">
+                <image width="100%" src="{% static 'img/16.png' %}" ></image>
+            </div>
+            <div class="col-md-2 mb-3 draggable" id ="17"  draggable="true">
+                <image width="100%" src="{% static 'img/17.png' %}" ></image>
+            </div>
+            <div class="col-md-2 mb-3 draggable" id ="18"  draggable="true">
+                <image width="100%" src="{% static 'img/18.png' %}" ></image>
+            </div>
+            <div class="col-md-2 mb-3 draggable" id ="19"  draggable="true">
+                <image width="100%" src="{% static 'img/19.png' %}" ></image>
+            </div>
+            <div class="col-md-2 mb-3 draggable" id ="20"  draggable="true">
+                <image width="100%" src="{% static 'img/20.png' %}" ></image>
+            </div>
+            <div class="col-md-2 mb-3 draggable" id ="21"  draggable="true">
+                <image width="100%" src="{% static 'img/21.png' %}" ></image>
+            </div>
+            <div class="col-md-2 mb-3 draggable" id ="22"  draggable="true">
+                <image width="100%" src="{% static 'img/22.png' %}" ></image>
+            </div>
+            <div class="col-md-2 mb-3 draggable" id ="23"  draggable="true">
+                <image width="100%" src="{% static 'img/23.png' %}" ></image>
+            </div>
+            <div class="col-md-2 mb-3 draggable" id ="24"  draggable="true">
+                <image width="100%" src="{% static 'img/24.png' %}" ></image>
+            </div>
+            <div class="col-md-2 mb-3 draggable" id ="25"  draggable="true">
+                <image width="100%" src="{% static 'img/25.png' %}" ></image>
+            </div>
+            <div class="col-md-2 mb-3 draggable" id ="26"  draggable="true">
+                <image width="100%" src="{% static 'img/26.png' %}" ></image>
+            </div>
+
+        </div>
+
+        <div class="row mb-4 aa" id="grade_container">
+            <div class="row col-md-4 mb-3 jumbotron font_container" id="grade_h_container"><p class="lead text-muted col-12">상</p></div>
+            <div class="row col-md-4 mb-3 jumbotron font_container" id="grade_m_container"><p class="lead text-muted col-12">중</p></div>
+            <div class="row col-md-4 mb-3 jumbotron font_container" id="grade_l_container"><p class="lead text-muted col-12">하</p></div>
+        </div>
+
+        <div id="survey_btn" style="margin-bottom: 3rem">
+             <a class="btn btn-lg btn-secondary" id="prev_btn" onclick="prev_page()" >Prev</a>
+             <a class="btn btn-lg btn-secondary" id="next_btn" onclick="next_page()" >Next</a>
+        </div>
+
+        <script type="text/javascript">
+            const keyword_arr = ["각진", "공적인", "불규칙한", "전문적인", "부드러운", "모던한", "조화로운", "뻣뻣한", "주의를 끄는", "지루한","고요한","섬세한","친근한","온화한","극적인","우아한","강한", "단호한", "쾌활한"];
+            let keyword = document.getElementById("keyword");
+            let sv_num = {{page}};
+
+            window.onload=function (){
+                reload_data(keyword_arr[sv_num-1]);
+            }
+
+
+            //드래그앤 드롭 이벤트 처리
+            const draggable_s = document.querySelectorAll(".draggable");
+            const containers = document.querySelectorAll(".font_container");
+
+            draggable_s.forEach(draggable => {
+                draggable.addEventListener("dragstart", () => {
+                    console.log("a");
+                    draggable.classList.add("dragging");
+                });
+                console.log("b");
+
+                draggable.addEventListener("dragend", () => {
+                    draggable.classList.remove("dragging");
+                });
+            });
+
+            containers.forEach(container => {
+                container.addEventListener("dragover", e => {
+                    e.preventDefault();
+                    const draggable = document.querySelector(".dragging");
+                    draggable.className="draggable dragging col-md-6 mb-2";
+                    container.appendChild(draggable);
+                });
+            });
+
+
+            if(sv_num === 1 ){
+                document.getElementById("prev_btn").style.display="none";
+            }
+            else{
+                keyword.innerHTML = keyword_arr[sv_num-1];
+                if(sv_num === 19){
+                    document.getElementById("next_btn").style.display="none";
+
+                    var sv_btn=document.createElement('button');
+                    var sv_txt=document.createTextNode("Submit");
+                    sv_btn.appendChild(sv_txt);
+
+                    sv_btn.setAttribute('class', 'btn btn-lg btn-secondary');
+                    sv_btn.setAttribute('id', 'submit_btn');
+                    sv_btn.setAttribute('onclick', 'submit_page()');
+
+                    document.getElementById("survey_btn").appendChild(sv_btn);
+                }
+            }
+
+            /*
+             function noEvent() {
+                 if (event.keyCode == 116) {
+                     event.keyCode= 2;
+                     return false;}
+                 else if(event.ctrlKey && (event.keyCode==78 || event.keyCode == 82)){
+                     return false;}
+             }
+             document.onkeydown = noEvent;
+             */
+
+            function  next_page(){
+
+                if(unfinished()===0){
+                    return 0;
+                }
+
+                finished(keyword.innerText);
+
+                let next_page = {{ page }}+1;
+                document.getElementById("next_btn").href = '{% url 'research_site:next' 1234 %}'.replace(/1234/, next_page.toString());
+            }
+
+            function  prev_page(){
+                finished(keyword.innerText);
+
+                let prev_page = {{ page }}-1;
+                document.getElementById("prev_btn").href = '{% url 'research_site:prev' 1234 %}'.replace(/1234/, prev_page.toString());
+            }
+
+            function  submit_page(){
+                if(unfinished()===0){
+                    return 0;
+                }
+
+                finished(keyword.innerText);
+                submit_data();
+            }
+
+            function unfinished(){
+                var tmp=document.getElementById("font_list");
+                if(tmp.childNodes.length !== 27){
+                    alert("설문이 완료되지 않았습니다.");
+                    return 0;
+                }
+            }
+
+            function finished(keyword_value){
+                let keyword_font=[];
+                let keyword_h=[];
+                let keyword_m=[];
+                let keyword_l=[];
+
+
+                let childnodes_h = document.getElementById("grade_h_container").childNodes;
+                let childnodes_m = document.getElementById("grade_m_container").childNodes;
+                let childnodes_l = document.getElementById("grade_l_container").childNodes;
+
+                var tmp;
+
+                for(var i=1; i< childnodes_h.length; i++){
+                    tmp = childnodes_h[i].getAttributeNode("id").nodeValue;
+                    keyword_h.push(tmp);
+                }
+
+                for(var i=1; i< childnodes_m.length; i++){
+                    tmp = childnodes_m[i].getAttributeNode("id").nodeValue;
+                    keyword_m.push(tmp);
+                }
+
+                for(var i=1; i< childnodes_l.length; i++){
+                    tmp = childnodes_l[i].getAttributeNode("id").nodeValue;
+                    keyword_l.push(tmp);
+                }
+
+                keyword_font.push(keyword_h);
+                keyword_font.push(keyword_m);
+                keyword_font.push(keyword_l);
+
+                localStorage.setItem(keyword_value, JSON.stringify(keyword_font));
+            }
+
+            function reload_data(keyword_value){
+                var tmp_data= localStorage.getItem(keyword_value);
+                if (tmp_data === null){
+                    return 0;
+                }
+                var tmp_data_arr = JSON.parse(tmp_data);
+
+                for(var i=0; i<3; i++){
+                    var tmp_cont=containers[i]
+                    for(var j=0; j<tmp_data_arr[i].length; j++){
+                        var image_element=document.getElementById(tmp_data_arr[i][j]);
+                        image_element.className="draggable col-md-6 mb-2";
+                        tmp_cont.appendChild(image_element);
+                    }
+                }
+            }
+
+            function submit_data(){
+
+                var data_dic={};
+                data_dic["name"]=localStorage.getItem("name");
+                data_dic["age"]=localStorage.getItem("age");
+                data_dic["grade"]=localStorage.getItem("grade");
+                data_dic["phone"]=localStorage.getItem("phone");
+
+                for(var i=0; i<keyword_arr.length; i++){
+                    data_dic[keyword_arr[i]]=localStorage.getItem(keyword_arr[i]);
+                }
+
+                var newForm=document.createElement('form');
+                newForm.method="POST";
+                newForm.action="{% url 'research_site:submit' %}";
+                newForm.enctype="multipart/form-data";
+                newForm.setAttribute("charset", "UTF-8")
+
+                var input=document.createElement('input');
+                input.setAttribute("type", "hidden");
+                input.setAttribute("name","final_data");
+                input.setAttribute("value", JSON.stringify(data_dic));
+                newForm.appendChild(input);
+
+                document.body.appendChild(newForm);
+                newForm.submit();
+            }
+
+        </script>
+     {% endblock %}
+     </body>
+</html>

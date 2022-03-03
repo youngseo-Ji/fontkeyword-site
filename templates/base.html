@@ -1,0 +1,46 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Font Keyword Research</title>
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.6/examples/cover/">
+    <link rel="stylesheet" type="text/css" href="{% static 'bootstrap.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'cover.css' %}">
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+      .row{margin-left: 0 !important; margin-right: 0 !important;}
+    </style>
+
+</head>
+<body class="text-center">
+    <div class="d-flex w-100 h-100 mx-auto flex-column">
+        <header class="masthead mb-auto">
+            <div class="inner">
+                <h3 class="masthead mt-auto">Font Keyword</h3>
+            </div>
+        </header>
+        <main role="main" class="inner cover">
+            {% block content %}
+            {% endblock %}
+        </main>
+        <footer class="mastfoot my-auto">
+            <p>숙명여자대학교 IT공학과 MINT LAB. 지영서(jyseo0102@sookmyug.ac.kr)</p>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+        <!--템플릿 상속-->
+    {% extends 'base.html' %}
+    <title>Title</title>
+</head>
+<body>
+{% block content %}
+    <div class="container" style="margin-bottom:10%">
+        <h3>글꼴 감정 키워드 선정을 위한 설문 조사</h3>
+        <p class="lead text-muted">안녕하세요. 숙명여자대학교 대학원 IT공학과에서 석사과정 중인 지영서입니다.<br/>해당 설문은 폰트를 대표하는 키워들을 추출하기 위한 설문입니다.<br/>설문은 총 30분 정도 소요될 예정입니다.</p>
+    </div>
+    <form action="{% url 'research_site:info' %}" method="post" id="user_info" enctype="multipart/form-data" onsubmit="info_submit();">
+        {% csrf_token %}
+        <script>
+            function info_submit(){
+                let user_name=document.getElementById("user_name").value;
+                let user_age=String(document.getElementById("user_age").value);
+                let user_phone=String(document.getElementById("user_phone").value);
+
+                let user_grade;
+                for(var i=0; i<3; i++){
+                    if(document.getElementsByName("user_grade")[i].checked===true){
+                        user_grade=document.getElementsByName("user_grade")[i].value;
+                    }
+                }
+
+                localStorage.setItem("name", user_name);
+                localStorage.setItem("age", user_age);
+                localStorage.setItem("grade", user_grade)
+                localStorage.setItem("phone", user_phone)
+            }
+        </script>
+        <div class="row" style="margin-bottom:10%; padding-left:30%; padding-right: 30% ">
+            <div class="col-md-3 mb-3">
+                <p>이름</p>
+                <input type="text" class="form-control" name="user_name" id="user_name" placeholder="이름" required/>
+            </div>
+            <div class="col-md-3 mb-3">
+                <p>나이</p>
+                <input type="number" class="form-control" name="user_age" id="user_age" placeholder="나이" min="0" max="120" step="1" required/>
+            </div>
+            <div class="col-md-3 mb-3">
+                <p>연락처</p>
+                <input type="tel" class="form-control" name="user_phone" id="user_phone" placeholder="01012341234"  pattern="[0-9]{10,11}" required/>
+            </div>
+            <div class="col-md-3 mb-3">
+                <p>폰트 익숙도</p>
+                <div style="display:inline-block; margin-right: 10%"><input type="radio" class="form-control" name="user_grade" value="a" required/>上</div>
+                <div style="display:inline-block; margin-right: 10%"><input type="radio" class="form-control" name="user_grade" value="b" required/>中</div>
+                <div style="display:inline-block;"><input type="radio" class="form-control" name="user_grade" value="c" required/>下</div>
+            </div>
+        </div>
+        <button type="submit" id="submitBtn" class="btn btn-lg btn-secondary">START SURVEY</button>
+    </form>
+{% endblock %}
+</body>
+</html>
